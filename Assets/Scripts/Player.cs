@@ -13,15 +13,24 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //PrintIntrodution();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Vector3 vec = new Vector3(xValue * Time.deltaTime, yValue * Time.deltaTime, zValue * Time.deltaTime);
-        //transform.Translate(vec);
+        MovePlayer();
+    }
 
+    void PrintIntrodution()
+    {
+        Debug.Log("Start!!!");
+        Debug.Log("Start!!!");
+        Debug.Log("Start!!!");
+    }
+
+    void MovePlayer()
+    {
         float xValue = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
         float zValue = Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime;
 
